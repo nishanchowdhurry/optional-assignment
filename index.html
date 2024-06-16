@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PHP Tasks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .task-button {
+            margin: 5px;
+        }
+        #output {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 50%;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function loadTask(task) {
+            $.ajax({
+                url: 'tasks.php',
+                type: 'POST',
+                data: { task: task },
+                success: function(data) {
+                    $('#output').html(data);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+
+<h1>Optional Assignment</h1>
+<button class="task-button" onclick="loadTask('task1')">Task 1: Perfect Number</button>
+<button class="task-button" onclick="loadTask('task2')">Task 2: Arithmetic Operations</button>
+<button class="task-button" onclick="loadTask('task3')">Task 3: Weather Information</button>
+<button class="task-button" onclick="loadTask('task4')">Task 4: Number Guessing Game</button>
+
+<div id="output">
+</div>
+<div>
+    <h>Md Nishan Chowdhury</h> <br>
+    <h>221902388</h>
+</div>
+</body>
+</html>

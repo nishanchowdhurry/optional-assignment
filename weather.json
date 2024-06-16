@@ -1,0 +1,14 @@
+{
+    "weather": [
+        {
+            "city": "Dhaka",
+            "temperature": 25,
+            "condition": "Sunny"
+        },
+        {
+            "city": "Rajshahi",
+            "temperature": 18,
+            "condition": "Cloudy"
+        }
+    ]
+}
